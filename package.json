@@ -20,8 +20,8 @@
     "dependencies": {
         "wcjs-renderer": "^1.0.2",
         "jquery": "*",
-        "jquery-ui": "jaruba/jquery-ui",
-        "computer-sleep" : "jaruba/computer-sleep",
+        "jquery-ui": "kozarevic/jquery-ui",
+        "computer-sleep" : "kozarevic/computer-sleep",
         "request" : "*"
     }
 }
