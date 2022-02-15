@@ -630,7 +630,6 @@ wjs.prototype.addPlaylist = function(playlist) {
                   this.vlc.playlist.addWithOptions(playlist[item].url,playlist[item].vlcArgs);
               } else this.vlc.playlist.add(playlist[item].url);
               if (playlist[item].title) this.vlc.playlist.items[this.itemCount()-1].title = "[custom]"+playlist[item].title;
-             console.log(process.env.VLC_PLUGIN_PATH)
               this.vlc.playlist.items[this.itemCount() - 1].setting = "{}";
               var playerSettings = {};
               if (typeof playlist[item].aspectRatio !== 'undefined') {
