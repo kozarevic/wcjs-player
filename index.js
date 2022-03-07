@@ -1346,7 +1346,7 @@ function isMediaChanged() {
 }
 
 function isBuffering(percent) {
-    this.find(".wcp-status").text("Buffering "+percent+"%");
+    this.find(".wcp-status").text("Buffering "+percent.toFixed(2)+"%");
     this.find(".wcp-status").stop().show(0);
     if (percent == 100) this.find(".wcp-status").fadeOut(1200);
 }
