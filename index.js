@@ -319,7 +319,15 @@ wjs.prototype.addPlayer = function(wcpSettings) {
             else if (["wcp-volume-low","wcp-volume-medium","wcp-volume-high","wcp-mute"].indexOf(buttonClass) > -1) wjsPlayer.toggleMute();
         }
         if ([5].indexOf(vlc.state) > -1 && buttonClass == "wcp-play") if (wjsPlayer.itemCount() > 0) wjsPlayer.play().animatePause();
-        if (buttonClass == "wcp-minimize") fullscreenOff.call(wjsPlayer);
+         if (buttonClass == "wcp-minimize") {
+            if (vlc.playlist.items[0].mrl.includes("movie")) {
+                if (buttonClass == "wcp-minimize") {
+                    vlc.stop();
+                    document.getElementById("playerC").style.display = "none";
+                }
+                else fullscreenOff.call(wjsPlayer);
+            }
+        }
         else if (buttonClass == "wcp-maximize") fullscreenOn.call(wjsPlayer);
     });
 
