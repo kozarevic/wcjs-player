@@ -320,7 +320,7 @@ wjs.prototype.addPlayer = function(wcpSettings) {
         }
         if ([5].indexOf(vlc.state) > -1 && buttonClass == "wcp-play") if (wjsPlayer.itemCount() > 0) wjsPlayer.play().animatePause();
          if (buttonClass == "wcp-minimize") {
-            if (vlc.playlist.items[0].mrl.includes("movie") || vlc.playlist.items[0].mrl.includes("movie")) {
+            if (vlc.playlist.items[0].mrl.includes("movie") || vlc.playlist.items[0].mrl.includes("series")) {
                 if (buttonClass == "wcp-minimize") {
                     vlc.stop();
                     document.getElementById("playerC").style.display = "none";
